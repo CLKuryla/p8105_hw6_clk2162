@@ -1,0 +1,83 @@
+---
+title: "P8105 Homework 6 - Linear Models"
+author: "Christine Lucille Kuryla"
+date: "2023-12-02"
+output: github_document
+---
+
+```{r, include = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+
+knitr::opts_chunk$set(
+	echo = TRUE,
+	warning = FALSE,
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+```
+
+# Problem 1
+
+```{r}
+
+
+
+```
+
+
+# Problem 2
+
+```{r p2_load_and_clean_data}
+
+# # This code is from the homework
+# weather_df = 
+#   rnoaa::meteo_pull_monitors(
+#     c("USW00094728"),
+#     var = c("PRCP", "TMIN", "TMAX"), 
+#     date_min = "2022-01-01",
+#     date_max = "2022-12-31") |>
+#   mutate(
+#     name = recode(id, USW00094728 = "CentralPark_NY"),
+#     tmin = tmin / 10,
+#     tmax = tmax / 10) |>
+#   select(name, id, everything())
+# 
+# # saving to repository/computer so I can work offline
+# write_csv(weather_df, "./data/weather.csv")
+
+# load data from repository
+weather_df <- read_csv("./data/weather.csv")
+
+```
+
+
+
+# Problem 3
+
+```{r p3_load_and_clean_data}
+
+# library(httr)
+# library(rvest)
+
+# Load data from website and save to computer/github so we can work offline and don't have to fetch it every time we knit
+# birthweight_data <-  GET("https://p8105.com/data/birthweight.csv") %>% 
+#   content("parsed")
+# write_csv(birthweight_data, "./data/birthweight.csv")
+
+# load data from repository
+birthweight_data <- read_csv("./data/birthweight.csv")
+
+```
+
+
